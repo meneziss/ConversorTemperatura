@@ -21,9 +21,7 @@ jobs:
           distribution: 'temurin'
           
       - name: 3. Compilar o código
-        
         run: javac ConversorTemperatura.java
 
       - name: 4. Executar os testes
-   
-        run: java ConversorTemperatura$ConversorTemperaturaTest
+        run: java 'ConversorTemperatura$ConversorTemperaturaTest'
