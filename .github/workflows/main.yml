@@ -1,4 +1,4 @@
-name: CI de Java 
+name: CI de Java (Múltiplos Arquivos)
 
 on:
   push:
@@ -20,8 +20,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           
-      - name: 3. Compilar o código
-        run: javac ConversorTemperatura.java
+      - name: 3. Compilar todo o código
+        run: javac *.java
 
-      - name: 4. Executar os testes
+      - name: 4. Executar testes do ConversorTemperatura
         run: java 'ConversorTemperatura$ConversorTemperaturaTest'
+        
+      - name: 5. Executar testes da CalculadoraIMC
+        run: java 'CalculadoraIMC$CalculadoraIMCTest'
