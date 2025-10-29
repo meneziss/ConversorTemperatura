@@ -34,8 +34,12 @@ public class ConversorTemperatura {
             System.out.println("Total de Testes Falhados: " + runner.testesFalhados);
             if (runner.testesFalhados == 0) {
                 System.out.println("Resultado: SUCESSO! Todos os testes passaram.");
+                
+                System.exit(0); 
             } else {
                 System.out.println("Resultado: FALHA! " + runner.testesFalhados + " teste(s) falhou(ram).");
+                
+                System.exit(1);
             }
         }
 
